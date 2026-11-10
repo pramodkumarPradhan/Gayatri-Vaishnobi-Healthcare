@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { openAppointmentModal } from '@/components/BookAppointmentModal';
 import { openLabReportsModal } from '@/components/LabReportsModal';
+import InstallPWAButton from '@/components/InstallPWAButton';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -155,6 +156,9 @@ export default function Navigation() {
           {/* Desktop Right Action Buttons (Slim & Merged) */}
           <div className="hidden lg:flex items-center gap-2.5 shrink-0">
             
+            {/* Install PWA Button */}
+            <InstallPWAButton />
+
             {/* 1. Access Lab Reports Button */}
             <button
               onClick={() => openLabReportsModal()}
@@ -264,6 +268,10 @@ export default function Navigation() {
               <FileText className="w-4 h-4 text-brand-blue" />
               <span>Access Lab Reports</span>
             </button>
+          </div>
+
+          <div className="pt-1">
+            <InstallPWAButton className="w-full justify-center py-2" />
           </div>
 
           <div className="grid gap-1">
